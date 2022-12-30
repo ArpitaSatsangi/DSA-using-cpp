@@ -1,0 +1,46 @@
+#include <iostream>
+#include <list>
+using namespace std;
+
+int main() 
+{
+    list<int> l;
+    
+    l.push_back(4);
+    l.push_front(7);
+    l.push_back(5);
+    l.push_front(1);
+    for(int i:l)
+    {
+        cout<<i<<" ";
+    }
+    cout<<endl;
+    
+    l.pop_front();
+    l.erase(l.begin());//delete ele pointed by begin iterator
+    for(int i:l)
+    {
+        cout<<i<<" ";
+    }
+    cout<<endl;
+    
+    cout<<"size of list  "<<l.size()<<endl<<endl;
+    
+    list<int> n(l);
+    cout<<"copy of pre list :   "; 
+    for(int i:n)
+    {
+        cout<<i<<" ";
+    }
+    
+    
+    list<int> m(5,100);//five elements of value 100
+    cout<<endl<<"new list :  ";
+    for(int i:m)
+    {
+        cout<<i<<" ";
+    }
+    cout<<endl;
+    
+    return 0;
+}
