@@ -1,0 +1,28 @@
+#include <iostream>
+#include <queue>
+using namespace std;
+
+int main() 
+{
+    queue<string> q;
+    
+    q.push("eahh1");
+    q.push("yeah2");
+    q.push("yooh3");
+    q.push("hooo4");
+    cout<<"first(front) ele is:  "<<q.front()<<endl;
+    
+    q.pop();
+    cout<<"after deletion first(front) ele is:  "<<q.front()<<endl;
+    
+    cout<<"size of queue:  "<<q.size()<<endl;
+    cout<<"empty or not:  "<<q.empty()<<endl;
+    
+    while (!q.empty()) 
+    {
+        cout << q.front() <<"   ";
+        q.pop();
+    }
+    
+    return 0;
+}
