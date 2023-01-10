@@ -1,0 +1,53 @@
+#include <iostream>
+#include <algorithm>
+#include <vector>
+
+using namespace std;
+
+int main() 
+{
+   vector <int> v;
+   
+   v.push_back(1);
+   v.push_back(6);
+   v.push_back(3);
+   v.push_back(7);
+   cout<<"print:  ";
+   for(int i:v)
+   {
+       cout<<i<<"  ";
+   }
+   cout<<endl<<"findng 8->  "<<binary_search(v.begin(),v.end(),8) <<endl;
+   cout<<"sort:  ";
+   sort(v.begin(),v.end());
+   for(int i:v)
+   {
+       cout<<i<<"  ";
+   }
+   cout<<endl<<"lower bound of 6->  "<<lower_bound(v.begin(),v.end(),6)-v.begin()<<endl;
+   cout<<"upper bound of 4->  "<<upper_bound(v.begin(),v.end(),4)-v.begin()<<endl;
+   cout<<"rotate:  ";
+   rotate(v.begin(),v.begin()+1,v.end());
+   for(int i:v)
+   {
+       cout<<i<<"  ";
+   }
+   
+   
+   
+   int a=5,b=2;
+   cout<<endl<<endl<<"brefore swapping: a="<<a <<" and   b="<<b<<endl;
+   cout<<"max  "<<max(a,b)<<endl;
+   cout<<"min  "<<min(a,b)<<endl;
+   swap(a,b);
+   cout<<"after swapping: a="<<a <<" and   b="<<b<<endl<<endl;
+   
+   
+   string s="abcd";
+   cout<<s<<endl;
+   reverse(s.begin(),s.end());
+   cout<<s<<endl;
+   
+   
+    return 0;
+}
