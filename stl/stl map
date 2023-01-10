@@ -1,0 +1,39 @@
+#include <iostream>
+#include <map>
+using namespace std;
+
+int main() 
+{
+    map<int,string> m;
+    
+    m[1]="hey";
+    m[4]="are";
+    m[14]="!!!!";
+    m[3]="how";
+    m[10]="doing";
+    m.insert({5,"are"});
+    
+    cout<<"before erase:"<<endl;
+    for(auto i:m)
+    {
+        cout<<i.first<<". "<<i.second<<endl;
+    }
+    
+    cout<<endl<<"5 present or not:  "<<m.count(5)<<endl<<endl;
+    
+    m.erase(5);
+    cout<<"after earse:"<<endl;
+    for(auto i:m)
+    {
+        cout<<i.first<<". "<<i.second<<endl;
+    }
+    
+    cout<<endl;
+    auto it=m.find(4);
+    for(auto i=it;i!=m.end();i++)
+    {
+        cout<<(*i).first<<endl;
+    }
+    
+    return 0;
+}
