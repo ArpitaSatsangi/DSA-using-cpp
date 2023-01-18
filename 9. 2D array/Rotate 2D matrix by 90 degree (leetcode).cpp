@@ -1,28 +1,23 @@
-//not done
 class Solution {
 public:
     void rotate(vector<vector<int>>& matrix) {
 
         int row=matrix.size();
-        int col=matrix[0].size();
-        int total=(row*col)-1;
-        int count=0;
+        int column=matrix[0].size();
 
-        int startingRow=0;   
-        int startingCol=0;   
-        int endingRow=row-1;     
-        int endingCol=col-1;    
-
-        while(count<total)
+        //transpose the matrix
+        for(int i=0;i<row;i++)
         {
-            .
-            .
-            .
-            .
-            .
-
+            for(int j=0;j<i;j++)
+            {
+                swap(matrix[i][j], matrix[j][i]);
+            }
         }
-        .
-        .
+
+        //reverse each row
+        for(int i=0;i<row;i++)
+        {
+            reverse(matrix[i].begin(),matrix[i].end());
+        }
     }
 };
