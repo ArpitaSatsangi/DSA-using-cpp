@@ -1,8 +1,7 @@
 class Solution {
 
 public:
-    int countPrimes(int n) {
-        
+    int countPrimes(int n) {  
         
     if(n<=1)
     {
@@ -21,7 +20,6 @@ public:
             prime[j]=false;
         }
     }
-
 
     return c;          
     }
