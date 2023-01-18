@@ -1,35 +1,28 @@
 class Solution {
-private:
-bool isPrime(int n)
-{
-    if(n<=1)
-    {
-        return true;
-    }
-        
-
-    for(int j=2;j<n;j++)
-    {
-        if(n%j==0)
-        {
-            return false;
-        }
-    }
-    return true;
-}
 
 public:
     int countPrimes(int n) {
         
-        int c=0;
+        
+    if(n<=1)
+    {
+        return false;
+    }
+    
+    int c=0;
+    vector <bool> prime (n+1,true);
+    for(int i=2;i<n;i++)
+    {
+        if(prime[i])
+        c++;
 
-        for(int i=2;i<n;i++)
+        for(int j=2*i;j<n;j+=i)
         {
-            if(isPrime(i))
-            {
-                c++;
-            }
+            prime[j]=false;
         }
-        return c;          
+    }
+
+
+    return c;          
     }
 };
