@@ -3,9 +3,8 @@ public:
     void rotate(vector<vector<int>>& matrix) {
 
         int row=matrix.size();
-        int column=matrix[0].size();
 
-        //transpose the matrix
+        //transpose of the matrix
         for(int i=0;i<row;i++)
         {
             for(int j=0;j<i;j++)
