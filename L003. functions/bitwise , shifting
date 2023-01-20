@@ -9,7 +9,7 @@ int main() {
 
     cout<<" a&b " << (a&b) << endl; //bitwise AND =4
     cout<<" a|b " << (a|b) << endl; //bitwise OR =6
-    cout<<" ~a " << ~a << endl; //bitwise complement =-5
+    cout<<" ~a " << ~a << endl; //bitwise NOT =-5
     cout<<" a^b " << (a^b) << endl; //bitwise XOR =2
 
     cout<< (17>>1)<<endl; //right shift - divide =8
