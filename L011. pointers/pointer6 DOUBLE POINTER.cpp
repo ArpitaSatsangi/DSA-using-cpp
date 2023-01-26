@@ -9,8 +9,12 @@ int main()
 
     cout<<"value: "<<i<<" - "<<*ptr<<" - "<<**doubleptr<<endl;
 
-    cout<<"pointer address: "<<ptr<<" - "<<&i<<" - "<<*doubleptr<<endl;
-    cout<<"double pointer address: "<<doubleptr<<endl;
+    cout<<"value address: "<<ptr<<" - "<<&i<<" - "<<*doubleptr<<endl;
+
+    cout<<"pointer address: "<<doubleptr<<" - "<<&ptr<<endl;
+
+    cout<<"double pointer address: "<<&doubleptr<<endl<<endl;
 
     return 0;
 }
+
