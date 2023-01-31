@@ -52,5 +52,5 @@ int main()
     cout<<"nth fib term is "<<fib(n)<<endl;
 
     cin>>m;
-    cout<<"ans is "<<bits(n,m)<<endl;
+    cout<<"sum of total number of 1 bits in both given numbers is "<<bits(n,m)<<endl;
 }
