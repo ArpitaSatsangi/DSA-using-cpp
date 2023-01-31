@@ -1,23 +1,24 @@
 #include <iostream>
 using namespace std;
 
-void print_count_forward(int n)//head recurion
+void print_count_reverse(int n)//tail recurion
 {
     if(n==0)
         return;
 
     cout<<n<<"  ";
-    print_count_forward(n-1);
+
+    print_count_reverse(n-1);//tail
 
 }
 
-void print_count_reverse(int n)//tail recursion
+void print_count_forward(int n)//head recursion
 {
     if(n==0)
         return;
 
+    print_count_forward(n-1);//head
 
-    print_count_reverse(n-1);
     cout<<n<<"  ";
 }
 
