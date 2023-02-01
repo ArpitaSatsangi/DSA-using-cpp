@@ -1,7 +1,7 @@
 #include <iostream>
 using namespace std;
 
-void SelectionSort(int arr[],int n)
+void BubbleSort(int arr[],int n)
 {
     bool swapped=false;
     for(int i=0;i<n-1;i++)
@@ -31,7 +31,7 @@ int main()
         cout<<arr[i]<<"  ";
     }
 
-    SelectionSort(arr,5);
+    BubbleSort(arr,5);
 
     cout<<endl<<"after  :     ";
     for (int i=0;i<5;i++)
