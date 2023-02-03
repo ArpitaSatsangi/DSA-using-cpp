@@ -1,0 +1,34 @@
+#include <iostream>
+using namespace std;
+
+class hero {
+
+    public:
+    int health;
+
+    //DEFAULT CONSTRUCTOR
+    hero()
+    {
+        cout<<"DEFAULT CONSTRUCTOR CALLED"<<endl<<endl;
+    }
+
+    //parameterised constructor
+    hero(int health)
+    {
+        cout<<"this (address) -> "<<this<<endl;
+        this->health=health;
+    }
+
+};
+
+
+int main()
+{
+
+    hero h1(20);//static
+    cout<<"address of h1 -> "<<&h1<<endl;
+    cout<<"health : "<<h1.health<<endl;
+
+
+    return 0;
+}
