@@ -1,0 +1,96 @@
+#include <iostream>
+#include <string.h>
+using namespace std;
+
+class hero {
+
+    private:
+    char level;
+
+    public:
+    int health;
+    char *name;
+
+
+    hero() {
+        cout<<"simple constructor called"<<endl;
+        name =new char[100];
+    }
+
+    hero(hero & temp)
+    {
+        char *a=new char[strlen(temp.name)+1];
+        strcpy(a,temp.name);
+        this->name=a;
+        this->health=temp.health;
+        this->level=temp.level;
+    }
+
+    int gethealth() {
+        return health;
+    }
+
+    char getlevel() {
+        return level;
+    }
+
+    void sethealth (int health)
+    {
+        this -> health= health;
+    }
+
+    void setlevel (char level)
+    {
+        this -> level= level;
+    }
+
+    void setname(char name[])
+    {
+        strcpy(this->name,name);
+    }
+
+    void print()
+    {
+        cout<<endl;
+        cout<<"~ name: "<<this->name<<" , ";
+        cout<<"level: "<<this->level<<" , ";
+        cout<<"health: "<<this->health<<" ~";
+        cout<<endl;
+    }
+};
+
+int main()
+{
+    hero h1;
+
+    cout<<endl<<"first";
+    char n[6]="Saral";
+    h1.setname(n);
+    h1.sethealth(23);
+    h1.setlevel('J');
+    h1.print();//Saral,J,23
+
+    hero h2(h1);//default copy constructor uses shallow copy for pointer name
+    h2.print();//Saral,J,23
+
+
+    h1.name[2]='f';
+    h1.health=90;
+
+
+    cout<<endl<<"second";
+    h1.print();//Safal,J,90
+    h2.print();//Saral,J,23
+
+
+
+    cout<<endl<<"third";
+    //copy assignment operator
+    h2=h1;
+    h1.print();//Safal,J,90
+    h2.print();//Safal,J,90
+
+
+
+    return 0;
+}
