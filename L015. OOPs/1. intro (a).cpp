@@ -25,7 +25,7 @@ int main()
     Layla.health=70;
     Layla.level='A';
 
-    cout<<"size of Heroine Layla: "<<sizeof(Layla)<<endl;//8
+    cout<<"size of Heroine Layla: "<<sizeof(Layla)<<endl;//8 because of padding and greedy allignment
     cout<<"health is "<<Layla.health<<endl;
     cout<<"level is "<<Layla.level<<endl;
 
