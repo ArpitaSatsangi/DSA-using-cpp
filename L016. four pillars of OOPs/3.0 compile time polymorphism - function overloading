@@ -1,0 +1,39 @@
+/*
+Polymorphism means "many forms", and it occurs when we have many classes that are
+related to each other by inheritance. Like a man is a son, brother, father, husband.
+*/
+
+#include <iostream>
+using namespace std;
+
+class A
+{
+    public:
+
+    void sayHello()
+    {
+        cout<<"1. heyy"<<endl;
+    }
+
+    /*
+    int sayHello()
+    {
+        cout<<"not allowed = function overloading"<<endl;
+    }
+    */
+
+    void sayHello(string name)
+    {
+        cout<<"2. hiii "<<name<<endl;
+    }
+
+};
+
+int main()
+{
+    A obj;
+    obj.sayHello();
+    obj.sayHello("Random human");
+
+    return 0;
+}
