@@ -1,3 +1,9 @@
+/*
+find all non empty subsequences of given string.
+
+input = abc
+output = a ab abc ac b bc c
+*/
 void solve(vector<string>& ans, string str, string output, int i) {
     //base case
     if(i>=str.length()) {
