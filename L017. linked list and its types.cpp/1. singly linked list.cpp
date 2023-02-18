@@ -1,24 +1,107 @@
 #include <iostream>
 using namespace std;
 
-class node 
+class node
 {
 public:
     int data;
     node * next;
-    
+
     //constructor
     node(int data)
     {
         this->data=data;
         this->next=NULL;
     }
-    
+
+
+
+
+
 };
+
+void insertStart(node * &head,int d)
+{
+    //new node is created
+    node *temp=new node(d);
+    temp->next=head;
+    head=temp;
+}
+
+
+void traverse(node * &head)
+{
+    if(head==NULL)
+    {
+        cout<<"list is empty."<<endl;
+        return ;
+    }
+
+    node *temp=head;
+    while(temp!=NULL)
+    {
+        cout<<temp->data<<"  ";
+        temp=temp->next;
+    }
+    cout<<endl;
+}
+
+void insertTail(node * &tail,int d)
+{
+    node *temp=new node(d);
+    tail->next=temp;
+    tail=temp;
+}
+
+void insertAtPosition(node * &head,node * &tail,int pos,int d)
+{
+    if(pos==1)
+    {
+        insertStart(head,d);
+        return;
+    }
+
+    node *temp=head;
+    int count=1;
+
+    while(count<pos-1)
+    {
+        temp=temp->next;
+        count++;
+    }
+
+    if(temp->next==NULL)
+    {
+        insertTail(tail,d);
+        return;
+    }
+
+    node *nodeToInsert=new node(d);
+
+    nodeToInsert->next = temp->next;
+
+    temp->next = nodeToInsert;
+
+}
+
+
 
 int main()
 {
-    node *start=NULL;
-    
+    node *n1=new node(10);
+    node *head=n1;
+    node *tail=n1;
+
+    insertStart(head,4);
+    insertStart(head,1);
+
+    insertTail(tail,30);
+    insertTail(tail,111);
+
+    insertAtPosition(head,tail,3,55);
+
+    traverse(head);
+
+
     return 0;
 }
