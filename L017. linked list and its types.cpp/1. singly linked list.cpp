@@ -14,9 +14,15 @@ public:
         this->next=NULL;
     }
 
-
-
-
+    ~node() {
+        int value = this -> data;
+        //memory free
+        if(this->next != NULL) {
+            delete next;
+            this->next = NULL;
+        }
+        cout << " memory is free for node with data " << value << endl;
+    }
 
 };
 
@@ -28,23 +34,6 @@ void insertStart(node * &head,int d)
     head=temp;
 }
 
-
-void traverse(node * &head)
-{
-    if(head==NULL)
-    {
-        cout<<"list is empty."<<endl;
-        return ;
-    }
-
-    node *temp=head;
-    while(temp!=NULL)
-    {
-        cout<<temp->data<<"  ";
-        temp=temp->next;
-    }
-    cout<<endl;
-}
 
 void insertTail(node * &tail,int d)
 {
@@ -85,6 +74,52 @@ void insertAtPosition(node * &head,node * &tail,int pos,int d)
 }
 
 
+void deleteNode(int pos, node * &head)
+{
+    node *temp=head;
+    if(pos==1)
+    {
+        head=head->next;
+        temp->next=NULL;
+        delete temp;
+    }
+    else
+    {
+        node *prev=NULL;
+        int c=1;
+
+        while(c<pos)
+        {
+            prev=temp;
+            temp=temp->next;
+            c++;
+        }
+
+        prev->next=temp->next;
+        temp->next=NULL;
+        delete temp;
+
+    }
+}
+
+
+void traverse(node * &head)
+{
+    if(head==NULL)
+    {
+        cout<<"list is empty."<<endl;
+        return ;
+    }
+
+    node *temp=head;
+    while(temp!=NULL)
+    {
+        cout<<temp->data<<"  ";
+        temp=temp->next;
+    }
+    cout<<endl;
+}
+
 
 int main()
 {
@@ -102,6 +137,12 @@ int main()
 
     traverse(head);
 
+    deleteNode(6,head);
+    deleteNode(3,head);
+    deleteNode(1,head);
+
+    traverse(head);
 
     return 0;
 }
+
