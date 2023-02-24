@@ -79,17 +79,18 @@ int main()
     insertStart(head,4);
     insertStart(head,0);
     insertStart(head,5);
+    insertStart(head,7);
 
     insertTail(tail,3);
     insertTail(tail,6);
     insertTail(tail,9);
     insertTail(tail,2);
 
-    traverse(head);
+    traverse(head);//7 5 0 4 1 3 6 9 2
 
     node *newww = kreverse(head,3);
     cout<<endl<<"group of three:"<<endl;
-    traverse(newww);
+    traverse(newww);//0 5 7 3 1 4 2 9 6
 
     return 0;
 }
