@@ -16,15 +16,15 @@ public:
 
 };
 
-bool floyd_detect_cycle(node *head)
+node * floyd_detect_cycle(node *head)
 {
     if(head==NULL)
-        return false;
+        return NULL;
 
     node *slow=head;
     node *fast=head;
 
-    while(slow!=fast && fast!=NULL)
+    while(slow!=NULL && fast!=NULL)
     {
         fast=fast->next;
         if(fast!=NULL)
@@ -33,15 +33,58 @@ bool floyd_detect_cycle(node *head)
         }
 
         slow=slow->next;
+
+        if(slow==fast)
+        {
+            return slow;
+        }
     }
 
-    if(slow==fast)
-    {
-        return true;
-    }
-
-    return false;
+    return NULL;
 }
+
+node *get_starting_node(node *head)
+{
+    if(head==NULL)
+        return NULL;
+
+    node *intersection= floyd_detect_cycle(head);
+
+    if(intersection == NULL)
+        return NULL;
+
+
+    node *slow=head;
+
+    while(slow!=intersection)
+    {
+        slow=slow->next;
+        intersection=intersection->next;
+    }
+
+    return slow;
+}
+
+void remove_cycle(node *head)
+{
+    if(head==NULL)
+        return ;
+
+    node *startofcycle= get_starting_node(head);
+
+    node *temp=startofcycle;
+
+    while(temp->next!=startofcycle)
+    {
+        temp=temp->next;
+    }
+
+    temp->next=NULL;
+
+}
+
+
+
 
 
 void insertStart(node * &head,int d)
@@ -90,17 +133,24 @@ int main()
 
     tail->next=head->next;//cycle creation
 
-    if(floyd_detect_cycle(head))
+    if(floyd_detect_cycle(head) != NULL)
     {
-        cout<<"yes there is a cycle present."<<endl;
+        cout<<"YESS cycle present!!"<<endl;
     }
     else
     {
-        cout<<"no there is no cycle present."<<endl;
+        cout<<"NO cycle present!!"<<endl;
     }
+
+    node *cycle = get_starting_node(head);
+    cout<<endl<<"cycle starts at "<<cycle->data<<endl;
+
+    remove_cycle(head);
+    traverse(head);
 
     return 0;
 }
+
 
 
 
