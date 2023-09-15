@@ -17,7 +17,7 @@
     };
     
 ***********************************************************/
-void inorder(BinaryTreeNode<int> * &root, int &count)
+void inorder(BinaryTreeNode<int> * root, int &count)
 {
     if(root==NULL)
     {
