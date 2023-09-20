@@ -64,6 +64,22 @@ void preorder(node *root)
     preorder(root->left);
     preorder(root->right);
 }
+
+
+void postorder(node *root)
+{
+    if(root==NULL)
+    {
+        return ;
+    }
+
+    postorder(root->left);
+    postorder(root->right);
+    cout<< root->data <<"  ";
+}
+
+
+
 int height(node* root)
 {
     if(root==NULL)
@@ -76,18 +92,6 @@ int height(node* root)
     
     int ans = max(left, right) + 1;
     return ans;
-}
-
-void postorder(node *root)
-{
-    if(root==NULL)
-    {
-        return ;
-    }
-
-    postorder(root->left);
-    postorder(root->right);
-    cout<< root->data <<"  ";
 }
 
 int main()
@@ -128,4 +132,3 @@ enter the data: -1
 INORDER: 4  2  5  1  7  
 height is 3
 */
-
