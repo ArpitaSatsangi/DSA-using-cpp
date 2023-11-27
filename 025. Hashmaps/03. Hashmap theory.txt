@@ -1,0 +1,21 @@
+In computer science, a hash map, often called a hash table, is a common data structure that offers effective key-value pair storing and retrieval. 
+It is an attractive choice for several applications since it provides constant-time complexity for average-case scenarios. 
+
+# Overview of a hash map
+A hashmap is an associative container that stores elements in a key-value format. 
+It utilizes a hash function to map keys to indices in an array, known as a bucket. 
+This hashing technique allows for fast retrieval of values based on their associated keys. 
+In C++, hash maps are implemented using the unordered_map container class from the Standard Template Library (STL).
+
+# Hash function
+The hash function is a crucial component of a hashmap that takes a key as input and returns an index within the range of the hashmap’s underlying array. 
+An ideal hash function should evenly distribute keys across the available indices, reducing collisions (when two keys map to the same index). 
+The unordered_map class in C++ provides a default hash function for primitive types, 
+but custom hash functions can be defined for user-defined types.
+
+# Collision resolution
+Collisions occur when multiple keys generate the same hash value and map to the same index in the array. 
+Various collision resolution techniques are employed to handle such scenarios. 
+The two primary approaches are chaining and open addressing. 
+Chaining involves creating a linked list at each bucket to store multiple key-value pairs, 
+while open addressing aims to find alternative locations within the hash map to store colliding elements.
