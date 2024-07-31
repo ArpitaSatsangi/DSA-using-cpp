@@ -1,0 +1,6 @@
+Race conditions, if it’s multi-threaded. Memory coherency errors also if it’s multi-threaded / using shared variables 
+(so make sure you’re using locks properly, EVEN for reads). 
+Make sure you are initializing your variables: they’re more likely to be 0 on debug builds; 
+on an optimized build, you’re more likely to get uninitialized variables containing random stack values.
+
+https://www.reddit.com/r/C_Programming/comments/182xys0/why_does_my_program_work_correctly_when_run/
