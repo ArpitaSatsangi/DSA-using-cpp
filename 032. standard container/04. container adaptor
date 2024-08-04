@@ -1,0 +1,1 @@
+A container adaptor instantiates, protects and wraps a container, and to simplify their usage, limits the public interface.
