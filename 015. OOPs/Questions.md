@@ -1,7 +1,7 @@
 #  Classes and Objects
 
 - What is the primary difference between a class and an object?
-- A class is a blueprint, and an object is an instance of the class.
+-- A class is a blueprint, and an object is an instance of the class.
 
 - Which of the following best represents an attribute in a class?
 - A variable that holds data for an object.
