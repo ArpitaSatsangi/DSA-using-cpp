@@ -234,6 +234,82 @@
 - All methods in an interface are abstract by default before Java 8.
 -- True
 
+---
+
+# Static Keyword
+
+- What does the static keyword signify in Java?
+-- A method or variable that is shared among all instances of a class.
+
+- Which of the following can a static method access directly?
+-- Static variables
+
+- When is a static block executed?
+-- When a class is loaded.
+
+- Can a static variable be accessed without creating an object of the class?
+-- Yes.
+
+- Why might you use a static method?
+-- To ensure that a method operates independently of any object.
+
+- Static blocks are executed in the order they appear in the code.
+-- True.
+
+A class can have multiple static blocks.
+-- True.
+
+- A static variable is initialized each time an object of the class is created.
+-- False
+
+---
+
+# Inner classes
+
+- What is an inner class in Java?
+-- A class declared within another class.
+
+- What is the purpose of a static nested class?
+-- To create a nested class without needing an instance of the enclosing class.
+
+- Can a non-static inner class access the private members of its enclosing class?
+-- Yes.
+
+- Which of the following statements about local inner classes is true?
+-- They can access final or effectively final local variables.
+
+- What is an anonymous inner class?
+-- A class without a name, typically used to implement an interface or subclass.
+
+- A static nested class can access the non-static members of its enclosing class.
+-- False.
+
+- Anonymous inner classes must always implement an interface or extend a class.
+-- True.
+
+- Local inner classes can only be accessed from within the method where they are defined.
+-- True.
+
+- A non-static inner class can exist without an instance of the outer class.
+-- False.
+
+- Inner classes are a way to logically group classes that are only used in one place.
+-- True.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
