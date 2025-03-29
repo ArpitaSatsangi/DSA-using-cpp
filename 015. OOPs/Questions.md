@@ -296,19 +296,60 @@ A class can have multiple static blocks.
 - Inner classes are a way to logically group classes that are only used in one place.
 -- True.
 
+---
 
+# Association, Aggregation, and Composition
 
+- Which of the following best describes association in object-oriented programming?
+-- A general relationship between two objects where one uses or interacts with the other.
 
+- In an aggregation relationship, what happens to the "part" objects when the "whole" object is destroyed?
+-- The part objects continue to exist independently.
 
+- Which of the following is true about composition?
+-- Composition is a form of association where the "whole" object owns the "part" objects, and the parts are destroyed if the whole is destroyed.
 
+- What is the main difference between aggregation and composition?
+-- In composition, the "part" objects depend on the "whole" object for their lifetime, whereas in aggregation, they do not.
 
+- Which of the following is an example of composition?
+-- A car and its engine.
 
+---
 
+# Object Cloning
 
+- What is object cloning in Java?
+-- Creating a new object from an existing object by copying its state.
 
+- Why is object cloning used?
+-- To copy an object without calling its constructor.
 
+- Which interface must a class implement to support cloning in Java?
+-- Cloneable
 
+- What is shallow cloning?
+-- Copying an object's primitive fields and references to objects without duplicating them.
 
+- What is deep cloning?
+-- Copying an object's data and duplicating all referenced objects as well.
+
+- Shallow cloning creates independent copies of all objects referenced by the original object.
+-- False
+
+- The clone() method in Java is declared in the Object class.
+-- True
+
+- Deep cloning requires manually copying all nested objects.
+-- True
+
+Shallow cloning is faster than deep cloning.
+-- True
+
+- A class that implements Cloneable can directly perform deep cloning.
+-- False
+
+----
 
 
 
