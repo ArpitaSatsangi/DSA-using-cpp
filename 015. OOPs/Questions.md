@@ -351,10 +351,75 @@ Shallow cloning is faster than deep cloning.
 
 ----
 
+# Exception Handling
 
+- What is Exception Handling in Java?
+-- A way to handle runtime errors to maintain the flow of the application
 
+- What keyword is used to throw an exception in Java?
+-- throw
 
+- Which of the following blocks always gets executed, whether an exception is handled or not?
+-- finally
 
+- You can have multiple catch blocks for a single try block in Java?
+-- True
+
+- What is the difference between throw and throws?
+-- throw is used to explicitly throw an exception, whereas throws declares that a method may throw exceptions
+
+- Can custom exceptions be created in Java? If yes, how?
+-- Yes, by extending the Exception or RuntimeException class
+
+- Unchecked exceptions must be declared in the method signature using the throws keyword?
+-- False
+
+---
+
+# Generics
+
+- What is the main purpose of generics in Java?
+-- To allow code reuse with different data types while ensuring type safety at compile time
+
+- Which of the following is a correct declaration of a generic class in Java?
+-- public class MyClass<T> { }
+
+- What are the advantages of using generics? (Select all that apply)
+-- Type safety & Code reuse & Reduces the need for type casting
+
+- Which of the following is an example of an upper-bounded wildcard in generics?
+-- <? extends Number>
+
+- What is the key difference between <? extends T> and <? super T>?
+-- <? extends T> allows you to read values of type T and its subclasses, while <? super T> allows you to write values of type T and its superclasses
+
+- Which of the following is an example of a generic method?
+-- public <T> void print(T element) { }
+
+- A class can have both generic methods and non-generic methods?
+-- True
+
+- Which of the following would correctly create a generic class that only accepts Number and its subclasses?
+-- public class MyClass<T extends Number> { }
+
+----
+
+# File Handling
+
+- What is file handling in OOP, and why is it important?
+-- It allows a program to store and retrieve data from files.
+
+- Which of the following is NOT a valid file mode in C++?
+-- ios::readwrite
+
+- How does file handling benefit from the concept of encapsulation in OOP?
+-- By grouping file operations in classes, ensuring proper access control.
+
+- What happens when a file is opened in 'append' mode in C++ or Java?
+-- Data is added at the end of the existing content.
+
+- In object-oriented programming, which concept allows the handling of exceptions during file operations?
+-- Exception Handling
 
 
 
