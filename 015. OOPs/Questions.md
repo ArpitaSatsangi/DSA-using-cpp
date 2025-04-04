@@ -421,10 +421,40 @@ Shallow cloning is faster than deep cloning.
 - In object-oriented programming, which concept allows the handling of exceptions during file operations?
 -- Exception Handling
 
+----
 
+# SOLID Design Principles
 
+- Which of the following best describes the Open-Closed Principle?
+-- Software entities should be open for extension but closed for modification.
 
+- The Liskov Substitution Principle implies:
+-- Subtypes should be able to replace their base types without affecting the correctness of the program.
 
+- According to the Single Responsibility Principle, a class should:
+-- Have only one reason to change.
 
+- The Interface Segregation Principle states that clients should not be forced to depend on interfaces they do not use.
+-- True
 
+- A software component violates the Open-Closed Principle when:
+-- You need to modify existing code to add new functionality.
 
+-----
+
+# Object Life Cycle
+
+- When is an object created in Java?
+-- When the new keyword is used
+
+- In Java, what happens during Garbage Collection?
+-- Objects that have no live references are automatically deallocated
+
+- How can cyclic references cause issues with memory management?
+-- They allow objects to hold each other in memory, preventing garbage collection
+
+- Garbage collection can always prevent memory leaks in Java.
+-- False
+
+- How does cyclic reference affect reference counting-based garbage collection systems?
+-- Reference counting will not be able to detect cycles, leading to memory leaks
